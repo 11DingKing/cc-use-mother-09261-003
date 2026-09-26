@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.git/
+.gitignore
+tests/
+*.db
+*.db-wal
+*.db-shm
+.venv/
+venv/
+README.md

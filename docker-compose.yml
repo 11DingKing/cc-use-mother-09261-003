@@ -1,0 +1,16 @@
+services:
+  case-workflow:
+    build: .
+    image: case-workflow:latest
+    container_name: case-workflow
+    ports:
+      - "8080:8080"
+    volumes:
+      - case-data:/data
+    environment:
+      CASE_DB_PATH: /data/cases.db
+      PORT: "8080"
+    restart: unless-stopped
+
+volumes:
+  case-data:
